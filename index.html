@@ -6,7 +6,12 @@
   <title>TechNova – Home</title>
   <link rel="stylesheet" href="style.css" />
   <script>
-    (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('lYNOR8x992N7WQJZ');
+    function loadLeadfeeder() {
+      (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('lYNOR8x992N7WQJZ');
+    }
+    if (localStorage.getItem('cookie_consent') === 'accepted') {
+      loadLeadfeeder();
+    }
   </script>
 </head>
 <body>
@@ -80,5 +85,33 @@
   <footer>
     <p>&copy; 2026 TechNova Inc. · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
+
+  <div id="cookie-banner" class="cookie-banner" style="display:none">
+    <div class="cookie-banner__content">
+      <p>We use cookies to understand how visitors use our site and improve your experience. <a href="privacy.html">Learn more</a></p>
+      <div class="cookie-banner__actions">
+        <button class="btn btn-outline" id="cookie-decline">Decline</button>
+        <button class="btn btn-primary" id="cookie-accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var consent = localStorage.getItem('cookie_consent');
+      if (!consent) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookie_consent', 'accepted');
+        document.getElementById('cookie-banner').style.display = 'none';
+        loadLeadfeeder();
+      });
+      document.getElementById('cookie-decline').addEventListener('click', function() {
+        localStorage.setItem('cookie_consent', 'declined');
+        document.getElementById('cookie-banner').style.display = 'none';
+      });
+    })();
+  </script>
 </body>
 </html>

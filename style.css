@@ -253,3 +253,29 @@ footer a { color: var(--primary); text-decoration: none; }
   .stats { gap: 2rem; padding: 2rem 1.5rem; }
   .contact-wrap { grid-template-columns: 1fr; }
 }
+
+/* COOKIE BANNER */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface2);
+  border-top: 1px solid var(--border);
+  z-index: 999;
+  padding: 1rem 2rem;
+}
+.cookie-banner__content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.cookie-banner__content p { color: var(--muted); font-size: 0.9rem; }
+.cookie-banner__content a { color: var(--primary); text-decoration: none; }
+.cookie-banner__content a:hover { text-decoration: underline; }
+.cookie-banner__actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
+.cookie-banner__actions .btn { padding: .5rem 1.25rem; font-size: 0.9rem; }

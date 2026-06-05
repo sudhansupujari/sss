@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNova – Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('lYNOR8x992N7WQJZ');
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="logo">TechNova</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Get in Touch</h1>
+    <p>Book a demo, ask a question, or just say hello — we'd love to hear from you.</p>
+  </div>
+
+  <section class="content">
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>Our team typically responds within 1 business day.</p>
+        <div class="contact-detail">📧 hello@technova.io</div>
+        <div class="contact-detail">📞 +1 (415) 000-1234</div>
+        <div class="contact-detail">📍 548 Market St, San Francisco, CA 94104</div>
+        <div class="contact-detail">🕐 Mon – Fri, 9 AM – 6 PM PST</div>
+      </div>
+      <form onsubmit="handleSubmit(event)">
+        <div>
+          <label>Full Name</label>
+          <input type="text" placeholder="Jane Doe" required />
+        </div>
+        <div>
+          <label>Work Email</label>
+          <input type="email" placeholder="jane@company.com" required />
+        </div>
+        <div>
+          <label>Company</label>
+          <input type="text" placeholder="Acme Inc." />
+        </div>
+        <div>
+          <label>Interested In</label>
+          <select>
+            <option>Nova Insights (Analytics)</option>
+            <option>Nova CRM</option>
+            <option>Nova Chat</option>
+            <option>Nova Flows</option>
+            <option>Nova Suite (Enterprise)</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label>Message</label>
+          <textarea placeholder="Tell us about your use case..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="success-msg" style="display:none;color:#10b981;margin-top:.5rem;">✓ Message sent! We'll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 TechNova Inc. · <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('success-msg').style.display = 'block';
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
